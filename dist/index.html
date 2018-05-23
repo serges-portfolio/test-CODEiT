@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CODEiT</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<link rel="icon" href="favicon.png"/>
+	<link rel="stylesheet" href="css/0style.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+		<form action="" class="sign-form" id="signUpForm">
+			<div class="sign-form__banner">
+				<h2>Sign Up</h2>
+			</div>
+			<label class="sign-form__input-container">
+				<input type="text" name="name" placeholder="First Name" required class="sign-form__input-field">
+			</label>
+			<label class="sign-form__input-container">
+				<input type="text" name="secondname" placeholder="Last Name" required class="sign-form__input-field">
+			</label>
+			<label class="sign-form__input-container">
+				<input type="email" name="email" placeholder="Email" required class="sign-form__input-field">
+			</label>
+			<label class="sign-form__input-container">
+				<select name="gender" required class="sign-form__input-field sign-form__input-select">
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+				</select>
+			</label>
+			<label class="sign-form__input-container">
+				<input type="pass" required placeholder="Password" class="sign-form__input-field">
+			</label>
+			<label class="sign-form__input-container -left">
+				<input type="checkbox" required class="sign-form__input-field -checkbox">
+				<span>Conditions of Agreement</span>
+			</label>
+			<input type="submit" value="send" class="sign-form__send-button">
+		</form>
+		<script	src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script>
+            var formData = JSON.stringify($("#signUpForm").serializeArray());
+            /*$http.post(url, data, {
+                headers : {
+                    'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+                }
+            });*/
+
+            $.ajax({
+                type : "POST",
+                url : "http://codeit.pro/codeitCandidates/serverFrontendTest/user/registration",
+                data : formData,
+                dataType : "json",
+                contentType : "application/x-www-form-urlencoded; charset=UTF-8"
+
+                /*success : function(url, method) {
+                    $('#signUpForm', {
+                        method: "POST",
+                        action: "http:\\companies.html"
+                    }).submit();
+
+                }*/
+
+
+
+                /*success : function() {
+                   if ($("#signUpForm").submit()) {
+                       window.location.href = "./companies.html";
+				   }
+
+                }*/
+
+
+
+				/*success: function(json) {
+                    if ($("#signUpForm").valid) {
+                        // json.redirect содержит строку URL
+							window.location.href = "http:\\companies.html";
+                    }
+                    else {
+                        console.log("Error occured");
+					}
+                }*/
+
+            });
+
+            /*var submitForm = function(url, method) {
+                $("#signUpForm", { // # was missing in the selector
+                    method: method,
+                    action: url
+                }).submit();
+            };
+            submitForm("./companies.html", "POST");*/
+
+            /*var secondTry = function() {
+                if ($("#signUpForm").valid ) {
+
+                    window.location.href = "./companies.html";
+                }
+            };
+            secondTry();*/
+
+
+
+            //$(location).attr('href',"./companies.html");
+
+		</script>
+</body>
+</html>

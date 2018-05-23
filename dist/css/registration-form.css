@@ -1,0 +1,79 @@
+body {
+  margin-top: 100px;
+  background-color: #a952ff; }
+
+.sign-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 580px;
+  margin: 0 auto;
+  background-color: #9e2eff;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 6px 11px 18px 3px rgba(0, 0, 0, 0.2); }
+  .sign-form__banner {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #cecece;
+    border-bottom: 1px solid #030303;
+    border-radius: 10px 10px 0 0; }
+    .sign-form__banner h2 {
+      font-family: Arial, sans-serif;
+      margin: 10px 0;
+      text-align: center; }
+  .sign-form__input-container {
+    display: block;
+    margin: 8px 0;
+    /*&.-arrow {
+      &:after {
+        z-index: 1;
+        position: absolute;
+        margin-top: -30px;
+        margin-left: 430px;
+        content: url("./../assets/select-button.svg");
+      }
+    }*/ }
+    .sign-form__input-container.-left {
+      display: inline-flex;
+      align-self: flex-start;
+      margin-top: 25px;
+      padding-left: 25px; }
+  .sign-form__input-field {
+    display: block;
+    width: 470px;
+    border: 2px solid transparent;
+    border-radius: 2px;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 18px;
+    background-color: #cdb9ff; }
+    .sign-form__input-field.-checkbox {
+      width: 25px;
+      outline: none; }
+  .sign-form__input-select {
+    display: block;
+    color: #828282;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none; }
+    .sign-form__input-select option {
+      background-color: #cecece; }
+  .sign-form__send-button {
+    align-self: flex-end;
+    margin-right: 55px;
+    margin-bottom: 25px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background-color: #e7e700;
+    font-family: inherit;
+    text-transform: uppercase;
+    padding: 5px 25px; }
+    .sign-form__send-button:hover {
+      background-color: #fff64b;
+      transform: scale(1.1);
+      transition: 0.6s;
+      cursor: pointer; }
+
+/*# sourceMappingURL=registration-form.css.map */
